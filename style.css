@@ -1,0 +1,127 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 90vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 80px 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.29);
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Buton ve input arasýnda hizalamayý saðlar */
+}
+
+.search-box input {
+    padding: 10px; /* Daha iyi görünüm için padding artýrýldý */
+    width: 70%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #2d6536;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px; /* Daha iyi görünüm için padding artýrýldý */
+    width: 25%;
+    background-color: #2d6536;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.4s, color 0.4s; /* Geçiþ süresi daha belirgin */
+}
+
+.search-box button:hover {
+    background-color: #1a3b20;
+    color: #ffff;
+}
+
+.result {
+    position: relative;
+    margin-top: 20px; /* Yukarýdan boþluk artýrýldý */
+}
+
+.result h3 {
+    font-size: 30px;
+    color: #000000;
+}
+
+.result .word {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Yukarýdan boþluk azaltýldý */
+}
+
+.result button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+.result .details {
+    display: flex;
+    gap: 10px;
+    color: #55bd68;
+    margin: 5px 0 20px 0;
+    font-size: 16px; /* Yazý tipi büyüklüðü artýrýldý */
+}
+
+.word-meaning {
+    color: #575a7b;
+}
+
+.error {
+    margin-top: 20px; /* Yukarýdan boþluk azaltýldý */
+    text-align: center;
+    color: #ff0000; /* Hata mesajý için daha belirgin renk */
+}
+
+.purple {
+    color: #964e8b;
+}
+
+.green {
+    color: #55bd68;
+}
+
+/* Responsive Tasarým */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input, .search-box button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-box button {
+        margin-bottom: 0;
+    }
+}
